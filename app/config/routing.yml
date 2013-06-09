@@ -1,0 +1,5 @@
+coll_dev_main:
+    resource: "@CollDevMainBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
