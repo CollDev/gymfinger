@@ -7,8 +7,9 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * User
  *
- * @ORM\Table()
+ * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="CollDev\MainBundle\Entity\UserRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class User
 {
@@ -24,56 +25,56 @@ class User
     /**
      * @var string
      *
-     * @ORM\Column(name="firstname", type="string", length=100)
+     * @ORM\Column(name="firstname", type="string", length=100, nullable=true)
      */
     private $firstname;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="lastname", type="string", length=100)
+     * @ORM\Column(name="lastname", type="string", length=100, nullable=true)
      */
     private $lastname;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="birthday", type="date")
+     * @ORM\Column(name="birthday", type="date", nullable=true)
      */
     private $birthday;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="photo", type="string", length=255)
+     * @ORM\Column(name="photo", type="string", length=255, nullable=true)
      */
     private $photo;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="shippingAddress", type="text")
+     * @ORM\Column(name="shippingAddress", type="text", nullable=true)
      */
     private $shippingAddress;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="billingAddress", type="text")
+     * @ORM\Column(name="billingAddress", type="text", nullable=true)
      */
     private $billingAddress;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="country", type="string", length=255)
+     * @ORM\Column(name="country", type="string", length=255, nullable=true)
      */
     private $country;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="timezone", type="datetimetz")
+     * @ORM\Column(name="timezone", type="string", length=255, nullable=true)
      */
     private $timezone;
 
@@ -273,7 +274,7 @@ class User
     /**
      * Set timezone
      *
-     * @param \DateTime $timezone
+     * @param string $timezone
      * @return User
      */
     public function setTimezone($timezone)
@@ -286,7 +287,7 @@ class User
     /**
      * Get timezone
      *
-     * @return \DateTime 
+     * @return string 
      */
     public function getTimezone()
     {
