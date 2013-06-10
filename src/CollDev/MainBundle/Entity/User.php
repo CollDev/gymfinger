@@ -371,4 +371,26 @@ class User extends BaseUser
     {
         return $this->status;
     }
+    
+    /**
+     * Defaults when inserting a user
+     * 
+     * @ORM\PrePersist()
+     */
+    public function prePersistTasks()
+    {
+        $this->setCreated(new \DateTime());
+        $this->setUpdated(new \DateTime('0000-00-00 00:00:00'));
+        $this->setStatus(1);
+    }
+    
+    /**
+     * Defaults when updating a user
+     * 
+     * @ORM\PreUpdate()
+     */
+    public function preUpdateTasks()
+    {
+        $this->setUpdated(new \DateTime());
+    }
 }
