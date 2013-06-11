@@ -1,9 +1,11 @@
 /* 
  * Observaciones:
-    * La tabla/entidad Statistic, deberia llamarse StatisticFager, porque quizas mas adelante hayan otros modulos de estadisticas
     * Se debe analizar bien el como se esta calculando el statistic_keystrokes y statistic_accuracy
     * Actualmente, las estadisticas son solo por palabras, y no por letras... es decir, si me equivoco letras y borro, no lo toma en cuenta
     * Tener en consideracion el implementar Google Analitics y sus respectivos _trackPageview (como en el juego de referencia)
+    * La tabla/entidad Statistic, deberia llamarse StatisticFager, porque quizas mas adelante hayan otros modulos de estadisticas
+ * Respuesta:
+    * Es cierto que van a haber otros módulos de estadísticas pero van a estar dentro de sus respectivos bundles, por lo tanto no hay necesidad de llamarse StatisticFager si no que cada bundle tendrá si entidad statistic
  * 
  * Pregunta:
     * Las pulsaciones o keystrokes: los esta restando cuando una palabra es incorrecta, esta bien eso ?
