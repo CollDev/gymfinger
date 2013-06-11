@@ -1,0 +1,38 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    {% stylesheets output='css/main.css' filter='cssrewrite' debug=false
+    'bundles/colldevmain/lib/select2/select2.css'
+    'bundles/colldevmain/css/layout.css'
+    'bundles/colldevmain/css/styles.css'
+    'bundles/colldevmain/css/sprites.css' -%}
+        <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block body -%}
+        <header>
+            <nav>
+                {%- image '@CollDevMainBundle/Resources/public/images/logo.jpg' -%}
+                <img src="{{ asset_url }}" alt="Gym Finger Logo" />
+                {%- endimage -%}
+                <a class="brand" href="{{ path('colldev_main_default_index') }}"><h1>Gym Finger - Aumenta tu velocidad al teclado</h1></a>
+            </nav>
+        </header>
+        {% block content %}{% endblock %}
+        <footer>
+        </footer>
+        <div id="fb-root"></div>
+{% endblock %}
+
+{% block javascripts %}
+    {% javascripts output='js/main.js' debug=false
+    '@CollDevMainBundle/Resources/public/js/jquery.js'
+    '@CollDevMainBundle/Resources/public/lib/select2/select2.js'
+    '@CollDevMainBundle/Resources/public/js/respond.js'
+    '@CollDevMainBundle/Resources/public/js/prefixfree.js'
+    '@CollDevMainBundle/Resources/public/js/scripts.js' -%}
+        <script src="{{ asset_url }}"></script>
+        <script src="http://connect.facebook.net/en_US/all.js"></script>
+    {% endjavascripts %}
+{% endblock %}

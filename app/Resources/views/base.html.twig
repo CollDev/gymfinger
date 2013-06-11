@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html itemscope itemtype="http://schema.org/LocalBusiness" lang="es">
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <!--[if ie]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Aumenta tu velocidad al teclado. Entrena en los gimnasios como jugando y gana fama, premios y tal vez trabajos." />
+        <meta name="author" content="CollDev - http://www.colldev.com/" />
+        <meta itemprop="name" content="Gym Finger">
+        <meta itemprop="description" content="Aumenta tu velocidad al teclado. Entrena en los gimnasios como jugando y gana fama, premios y tal vez trabajos.">
+        {%- image '@CollDevMainBundle/Resources/public/images/logo.jpg' -%}
+        <meta itemprop="image" content="http://www.gymfinger.com{{ asset_url }}">
+        {%- endimage -%}
+        <title>{% block title %}Gym Finger{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <!--[if lt IE 7]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->
     </head>
+    
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
