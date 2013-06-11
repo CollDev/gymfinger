@@ -1,0 +1,65 @@
+{% extends 'CollDevFagerBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>Statistic</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Ip</th>
+                <td>{{ entity.ip }}</td>
+            </tr>
+            <tr>
+                <th>Total</th>
+                <td>{{ entity.total }}</td>
+            </tr>
+            <tr>
+                <th>Keystrokes</th>
+                <td>{{ entity.keystrokes }}</td>
+            </tr>
+            <tr>
+                <th>Correct</th>
+                <td>{{ entity.correct }}</td>
+            </tr>
+            <tr>
+                <th>Wrong</th>
+                <td>{{ entity.wrong }}</td>
+            </tr>
+            <tr>
+                <th>Elapsed time</th>
+                <td>{{ entity.elapsedTime }}</td>
+            </tr>
+            <tr>
+                <th>User input</th>
+                <td>{{ entity.userInput }}</td>
+            </tr>
+            <tr>
+                <th>Mistakes</th>
+                <td>{{ entity.mistakes }}</td>
+            </tr>
+            <tr>
+                <th>Goodies</th>
+                <td>{{ entity.goodies }}</td>
+            </tr>
+            <tr>
+                <th>Backspace counter</th>
+                <td>{{ entity.backspaceCounter }}</td>
+            </tr>
+            <tr>
+                <th>Created</th>
+                <td>{% if entity.created %}{{ entity.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+    <ul class="record_actions">
+        <li>
+            <a href="{{ path('statistic') }}">
+                Back to the list
+            </a>
+        </li>
+    </ul>
+{% endblock %}

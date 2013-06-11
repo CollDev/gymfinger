@@ -1,0 +1,81 @@
+/* 
+    Document   : styles
+    Created on : 10/03/2013, 11:13:38 AM
+    Author     : Joe Robles <joe.robles.pdj@gmail.com>
+    Description:
+        Purpose of the stylesheet follows.
+*/
+input, select, textarea {
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    padding: 0.4em;
+}
+div.fager-main {
+    padding-top:10px;
+    padding-bottom:30px;
+}
+div.fager-main div.container-game {
+    margin-bottom:50px;
+}
+div.fager-main div.restart-fager {
+    float:left;
+    margin:0px 14px;
+    width:200px;
+    height:38px;
+}
+div.fager-main div.restart-fager:hover { cursor:pointer; }
+div.fager-main div.container-words {
+    padding:6px 4px 12px;
+    height:74px;
+    overflow:hidden;
+    font-size:20px;
+    line-height:30px;
+    border:1px solid #8eb6d8;
+    border-radius:4px;
+}
+div.fager-main div.visible-words {
+    position:relative;
+    /*color:#111111;*/
+}
+div.fager-main div.visible-words span {
+    padding:3px 5px 3px 5px;
+    margin-right:-7px;
+}
+div.fager-main div.input-row div.input-box {
+    margin-top: 10px;
+}
+div.fager-main div.input-row input#input-words {
+    height:28px;
+    padding:4px 5px 5px 10px;
+    margin-right:3px;
+    font-size:2em;
+    float:left;
+}
+div.fager-main div.input-row div.timer {
+    width:11%;
+    text-align:center;
+    font-size:2.0em;
+    float:left;
+    border-radius:3px;
+    color:white;
+    background:#3c4d5c;
+    background:linear-gradient(top,#2b3842 0%,#3c4d5c 100%);
+}
+div.fager-main span.highlight {
+    background:#dddddd;
+    color:#000000;
+    border-radius:3px;
+}
+div.fager-main span.highlight-wrong { background:red; }
+div.fager-main span.wrong {
+    color:red;
+}
+div.fager-main span.correct {
+    color:green;
+}
+div.fager-main div.container-result {
+    background:white;
+    padding:20px;
+    font-size:1.4em;
+    border-radius:5px;
+}

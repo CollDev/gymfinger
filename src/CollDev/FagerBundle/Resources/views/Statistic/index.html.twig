@@ -1,0 +1,48 @@
+{% extends 'CollDevFagerBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>Statistic list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Ip</th>
+                <th>Total</th>
+                <th>Keystrokes</th>
+                <th>Correct</th>
+                <th>Wrong</th>
+                <th>Elapsed time</th>
+                <th>Mistakes</th>
+                <th>Goodies</th>
+                <th>Backspace counter</th>
+                <th>Created</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('statistic_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.ip }}</td>
+                <td>{{ entity.total }}</td>
+                <td>{{ entity.keystrokes }}</td>
+                <td>{{ entity.correct }}</td>
+                <td>{{ entity.wrong }}</td>
+                <td>{{ entity.elapsedTime }}</td>
+                <td>{{ entity.mistakes }}</td>
+                <td>{{ entity.goodies }}</td>
+                <td>{{ entity.backspaceCounter }}</td>
+                <td>{% if entity.created %}{{ entity.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('statistic_show', { 'id': entity.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}

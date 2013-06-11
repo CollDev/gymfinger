@@ -1,1 +1,23 @@
-Hello {{ name }}!
+{% extends 'CollDevFagerBundle::layout.html.twig' %}
+
+{% block content %}
+                <div class="fager-main">
+                    <div class="container-game">
+                        <div class="container-words">
+                            <div class="visible-words"></div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-box">
+                                <input type="text" id="input-words" />
+                                <div class="timer"></div>
+                            </div>
+                            <div class="restart-fager">
+                                {%- image '@CollDevFagerBundle/Resources/public/images/reload.png' -%}
+                                <img src="{{ asset_url }}" alt="Reload Fager" height="38" width="37" />
+                                {%- endimage -%}
+                                <span>Reiniciar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{% endblock %}

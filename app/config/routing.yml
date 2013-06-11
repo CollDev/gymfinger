@@ -1,7 +1,7 @@
 coll_dev_fager:
     resource: "@CollDevFagerBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /fager
 
 coll_dev_main:
     resource: "@CollDevMainBundle/Controller/"

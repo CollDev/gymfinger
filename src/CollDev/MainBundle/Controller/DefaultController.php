@@ -14,6 +14,6 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return array();
+        return $this->render('CollDevFagerBundle:Default:index.html.twig');
     }
 }
